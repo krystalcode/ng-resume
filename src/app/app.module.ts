@@ -6,13 +6,16 @@ import { MaterialModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { AwardsComponent } from './awards/awards.component';
 
 const routes: Routes = [
+  { path: 'awards'             , component: AwardsComponent       },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
+    AwardsComponent,
   ],
   imports: [
     BrowserModule,
