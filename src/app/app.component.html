@@ -1,0 +1,85 @@
+<md-sidenav-container>
+  <md-sidenav mode="side" opened="true" color="primary">
+    <md-card>
+
+      <img id="my-avatar" src="/assets/avatar.115.jpg">
+      <md-card-title>Jane Doe</md-card-title>
+      <md-card-subtitle>Software Developer</md-card-subtitle>
+
+      <md-card-content>
+        <ul>
+          <li>
+            <a [routerLink]="['/cover-letter']">
+              <i class="material-icons">short_text</i> Cover Letter
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/perspectives']">
+              <i class="material-icons">remove_red_eye</i> Perspectives
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/work-experience']">
+              <i class="material-icons">work</i> Work Experience
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/skills-technologies']">
+              <i class="material-icons">developer_board</i> Skills & Technologies
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/code']">
+              <i class="material-icons">code</i> Code
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/education']">
+              <i class="material-icons">school</i> Education
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/awards']">
+              <i class="material-icons">stars</i> Awards
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/languages']">
+              <i class="material-icons">language</i> Languages
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/interests']">
+              <i class="material-icons">rowing</i> Interests & Other
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/location']">
+              <i class="material-icons">location_on</i> Location
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/files']">
+              <i class="material-icons">picture_as_pdf</i> Files
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/contact']">
+              <i class="material-icons">email</i> Contact Me
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/share']">
+              <i class="material-icons">share</i> Share
+            </a>
+          </li>
+        </ul>
+      </md-card-content>
+
+    </md-card>
+  </md-sidenav>
+
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>
