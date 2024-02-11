@@ -12,12 +12,14 @@ import { AwardsComponent } from './awards/awards.component';
 import { EducationComponent } from './education/education.component';
 import { CodeComponent } from './code/code.component';
 import { FilesComponent } from './files/files.component';
+import { InterestsComponent } from './interests/interests.component';
 
 const routes: Routes = [
   { path: 'cover-letter'       , component: CoverLetterComponent  },
   { path: 'code'               , component: CodeComponent         },
   { path: 'education'          , component: EducationComponent    },
   { path: 'awards'             , component: AwardsComponent       },
+  { path: 'interests'          , component: InterestsComponent    },
   { path: 'files'              , component: FilesComponent        },
   { path: 'contact'            , component: ContactComponent      },
 ];
@@ -31,6 +33,7 @@ const routes: Routes = [
     EducationComponent,
     CodeComponent,
     FilesComponent,
+    InterestsComponent
   ],
   imports: [
     BrowserModule,
