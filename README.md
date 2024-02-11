@@ -1,3 +1,5 @@
+Because presenting your resume as a PDF file is so like 20th century!
+
 # NgResume
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.0.
