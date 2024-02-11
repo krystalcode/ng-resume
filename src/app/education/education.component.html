@@ -1,0 +1,76 @@
+<h2>Education</h2>
+
+<div class="card-list">
+  <md-card *ngFor="let item of items" class="with-appendix">
+
+    <md-card-header>
+
+      <img *ngIf="item.logo" md-card-avatar src="{{item.logo}}">
+      <md-card-title>{{item.title}}</md-card-title>
+      <md-card-subtitle>@{{item.institution}}</md-card-subtitle>
+
+    </md-card-header>
+
+    <md-card-content>
+      <div [innerHTML]="item.description"></div>
+
+      <ul class="card-appendix unstyled">
+        <li *ngIf="item.date">
+          <i class="material-icons" title="Date">date_range</i> {{item.date}}
+        </li>
+        <li *ngIf="item.location">
+          <i class="material-icons" title="Location">location_on</i> {{item.location}}
+        </li>
+        <li *ngIf="item.links">
+          <i class="material-icons" title="Links">link</i> <span *ngFor="let link of item.links"><a href="{{link}}" target="_blank">{{link}}</a></span>
+        </li>
+        <li *ngIf="item.keywords">
+          <i class="material-icons" title="Keywords">label_outline</i> {{item.keywords}}
+        </li>
+        <li *ngIf="item.technologies">
+          <i class="material-icons" title="Tools & Technologies">developer_board</i> {{item.technologies}}
+        </li>
+      </ul>
+    </md-card-content>
+
+  </md-card>
+</div>
+
+<br />
+<h2>Non-academic Education</h2>
+
+<p>
+  Do you have any non-academic education? List it here.
+</p>
+
+<div class="card-list">
+  <md-card *ngFor="let item of informalItems" class="mini-card with-appendix">
+
+    <md-card-header *ngIf="item.logo">
+
+      <img *ngIf="item.logo" md-card-avatar src="{{item.logo}}" class="img-circle">
+      <md-card-title>
+        {{item.title}} <span style="font-size:16px;font-style:italic;color:#777">{{item.description}}</span>
+      </md-card-title>
+      <md-card-subtitle>@{{item.teacher}}</md-card-subtitle>
+
+    </md-card-header>
+
+    <md-card-title *ngIf="!item.logo">
+      {{item.title}} <span style="font-size:16px;font-style:italic;color:#777">{{item.description}}</span>
+    </md-card-title>
+    <md-card-subtitle *ngIf="!item.logo">@{{item.teacher}}</md-card-subtitle>
+
+    <md-card-content>
+      <ul class="card-appendix unstyled">
+        <li *ngIf="item.date">
+          <i class="material-icons" title="Date">date_range</i> {{item.date}}
+        </li>
+        <li *ngIf="item.location">
+          <i class="material-icons" title="Location">location_on</i> {{item.location}}
+        </li>
+      </ul>
+    </md-card-content>
+
+  </md-card>
+</div>

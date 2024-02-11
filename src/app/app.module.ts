@@ -9,11 +9,13 @@ import { AppComponent } from './app.component';
 import { CoverLetterComponent } from './cover-letter/cover-letter.component';
 import { ContactComponent } from './contact/contact.component';
 import { AwardsComponent } from './awards/awards.component';
+import { EducationComponent } from './education/education.component';
 import { CodeComponent } from './code/code.component';
 
 const routes: Routes = [
   { path: 'cover-letter'       , component: CoverLetterComponent  },
   { path: 'code'               , component: CodeComponent         },
+  { path: 'education'          , component: EducationComponent    },
   { path: 'awards'             , component: AwardsComponent       },
   { path: 'contact'            , component: ContactComponent      },
 ];
@@ -24,6 +26,7 @@ const routes: Routes = [
     CoverLetterComponent,
     ContactComponent,
     AwardsComponent,
+    EducationComponent,
     CodeComponent,
   ],
   imports: [
