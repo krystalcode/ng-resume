@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CoverLetterComponent } from './cover-letter/cover-letter.component';
 import { ContactComponent } from './contact/contact.component';
+import { LanguagesComponent } from './languages/languages.component';
 import { AwardsComponent } from './awards/awards.component';
 import { EducationComponent } from './education/education.component';
 import { CodeComponent } from './code/code.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'code'               , component: CodeComponent         },
   { path: 'education'          , component: EducationComponent    },
   { path: 'awards'             , component: AwardsComponent       },
+  { path: 'languages'          , component: LanguagesComponent    },
   { path: 'interests'          , component: InterestsComponent    },
   { path: 'files'              , component: FilesComponent        },
   { path: 'contact'            , component: ContactComponent      },
@@ -29,6 +31,7 @@ const routes: Routes = [
     AppComponent,
     CoverLetterComponent,
     ContactComponent,
+    LanguagesComponent,
     AwardsComponent,
     EducationComponent,
     CodeComponent,
