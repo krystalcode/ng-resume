@@ -1,0 +1,67 @@
+<h2>Code</h2>
+
+<p>
+  You can explore my GitHub account under the username <a href="https://github.com/jane-doe" target="_blank">jane-doe</a>, but here are some examples.
+</p>
+
+<div class="tip">
+  <i class="material-icons">search</i> <span style="font-style:italic">Tip: Use the browser's search function (Ctr+F) to look for a specific language or skill.</span>
+</div>
+
+<h3>Most recent and maintained</h3>
+<div class="card-list">
+  <md-card *ngFor="let item of current" class="mini-card with-appendix">
+
+    <md-card-title>{{item.title}}</md-card-title>
+
+    <md-card-content>
+      <ul class="card-appendix unstyled">
+        <li *ngIf="item.maintained">
+          <i class="material-icons">trending_up</i> Actively maintained
+        </li>
+        <li *ngIf="!item.maintained">
+          <i class="material-icons">trending_down</i> Not actively maintained
+        </li>
+        <li *ngIf="item.technologies">
+          <i class="material-icons" title="Technologies">developer_board</i> {{item.technologies}}
+        </li>
+        <li *ngIf="item.links.length">
+          <i class="material-icons" title="Links">link</i>
+          <span *ngFor="let link of item.links;let l = last"><a href="{{link}}" target="_blank">{{link}}</a><span *ngIf="!l"><br /> &nbsp; &nbsp; &nbsp; </span></span>
+        </li>
+      </ul>
+
+      <div *ngIf="item.description" [innerHTML]="item.description"></div>
+    </md-card-content>
+
+  </md-card>
+</div>
+
+<h3>Minimally maintained</h3>
+<div class="card-list">
+  <md-card *ngFor="let item of items" class="mini-card with-appendix">
+
+    <md-card-title>{{item.title}}</md-card-title>
+
+    <md-card-content>
+      <ul class="card-appendix unstyled">
+        <li *ngIf="item.maintained">
+          <i class="material-icons">trending_up</i> Actively maintained
+        </li>
+        <li *ngIf="!item.maintained">
+          <i class="material-icons">trending_down</i> Not actively maintained
+        </li>
+        <li *ngIf="item.technologies">
+          <i class="material-icons" title="Technologies">developer_board</i> {{item.technologies}}
+        </li>
+        <li *ngIf="item.links.length">
+          <i class="material-icons" title="Links">link</i>
+          <span *ngFor="let link of item.links;let l = last"><a href="{{link}}" target="_blank">{{link}}</a><span *ngIf="!l"><br /> &nbsp; &nbsp; &nbsp;</span></span>
+        </li>
+      </ul>
+
+      <div *ngIf="item.description" [innerHTML]="item.description"></div>
+    </md-card-content>
+
+  </md-card>
+</div>

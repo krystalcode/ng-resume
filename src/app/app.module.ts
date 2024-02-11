@@ -7,8 +7,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AwardsComponent } from './awards/awards.component';
+import { CodeComponent } from './code/code.component';
 
 const routes: Routes = [
+  { path: 'code'               , component: CodeComponent         },
   { path: 'awards'             , component: AwardsComponent       },
 ];
 
@@ -16,6 +18,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     AwardsComponent,
+    CodeComponent,
   ],
   imports: [
     BrowserModule,
