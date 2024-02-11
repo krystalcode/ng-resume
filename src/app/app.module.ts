@@ -6,11 +6,13 @@ import { MaterialModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { CoverLetterComponent } from './cover-letter/cover-letter.component';
 import { ContactComponent } from './contact/contact.component';
 import { AwardsComponent } from './awards/awards.component';
 import { CodeComponent } from './code/code.component';
 
 const routes: Routes = [
+  { path: 'cover-letter'       , component: CoverLetterComponent  },
   { path: 'code'               , component: CodeComponent         },
   { path: 'awards'             , component: AwardsComponent       },
   { path: 'contact'            , component: ContactComponent      },
@@ -19,6 +21,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    CoverLetterComponent,
     ContactComponent,
     AwardsComponent,
     CodeComponent,
