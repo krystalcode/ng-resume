@@ -1,0 +1,235 @@
+/**
+ * @I Use SASS instead of CSS
+ *    type     : improvement
+ *    priority : low
+ *    labels   : development
+ *
+ * @I Add comments to CSS
+ *    type     : improvement
+ *    priority : low
+ *    labels   : coding standards, documentation
+ *
+ * @I Customize theme and use it instead of special rules, where appropriate
+ *    type     : improvement
+ *    priority : low
+ *    labels   : modularity
+ */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~flag-icon-css/css/flag-icon.min.css';
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,700');
+
+/**
+ * Page structure.
+ */
+html, body, app-root, md-sidenav-container, md-sidenav {
+  height: 100%;
+}
+md-sidenav-container {
+  background-color: #fbfbfb;
+}
+.main-content {
+  padding: 32px;
+}
+
+/**
+ * Sidenav.
+ */
+md-sidenav.mat-sidenav {
+  border-right: 1px solid cyan;
+  max-width: 255px;
+}
+md-sidenav.mat-sidenav,
+md-sidenav md-card.mat-card{
+  background-color: lightcyan;
+}
+md-sidenav md-card.mat-card {
+  box-shadow: none !important;
+  margin-top: 0;
+}
+md-sidenav md-card-title.mat-card-title:not(:first-child) {
+  margin: 4px 0;
+}
+md-sidenav md-card md-card-subtitle.mat-card-subtitle:not(:first-child) {
+  margin-top: 0;
+}
+md-sidenav img#my-avatar {
+  border: 2px solid darkcyan;
+  border-radius: 24px;
+}
+md-sidenav #plus-company {
+  display: inline-block;
+  padding-left: 5px;
+}
+md-sidenav #plus-company i {
+  font-size: 30px;
+  margin-right: 0;
+  vertical-align: top;
+}
+md-sidenav #plus-company img {
+  padding-bottom: 10px;
+}
+md-sidenav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+md-sidenav ul > li {
+  padding: 5px 0;
+}
+md-sidenav .material-icons {
+  margin-right: 5px;
+}
+
+/**
+ * Typography.
+ */
+body {
+  margin: 0;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 18px;
+}
+.main-content {
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+.main-content h2:first-child {
+  margin-top: 0;
+}
+a {
+  color: darkcyan;
+  text-decoration: none;
+  cursor: pointer;
+}
+ul {
+  padding-left: 32px;
+}
+ul.unstyled {
+  list-style-type: none;
+  padding-left: 0;
+}
+.material-icons {
+  vertical-align: middle;
+  opacity: 0.6;
+}
+.flag-icon {
+  vertical-align: top;
+}
+.highlight-type1 {
+  font-size: 18px;
+}
+.highlight-type2 {
+  font-weight: bold;
+}
+blockquote {
+  background-color: #eee;
+  border-left: 5px solid #ccc;
+  margin: 16px 32px;
+  padding: 8px;
+}
+blockquote > p:first-child {
+  margin-top: 0;
+}
+
+/**
+ * Cards.
+ */
+.card-list md-card.mat-card:first-child,
+.card-list md-card.mini-card:first-child {
+  margin-top: 0;
+}
+md-card.mat-card {
+  background-color: #fafafa;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin-top: 16px;
+}
+md-card img.mat-card-avatar {
+  border-radius: 0;
+}
+md-card md-card-header.mat-card-header md-card-title.mat-card-title,
+md-card md-card-title.mat-card-title {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+md-card-content.mat-card-content {
+  font-size: 18px;
+}
+md-card md-card-subtitle.mat-card-subtitle:not(:first-child) {
+  margin-top: -8px;
+}
+md-card.with-appendix md-card-content ul.card-appendix {
+  font-size: 12px;
+}
+md-card.with-appendix md-card-content ul.card-appendix > li > i.material-icons {
+  font-size: 16px;
+}
+md-card.mini-card {
+  padding: 16px;
+  margin-top: 1px;
+}
+
+/**
+ * Various reusable elements.
+ */
+.tip {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.tip i.material-icons {
+  font-size: 18px;
+}
+.img-circle {
+  border-radius: 50%;
+}
+
+/**
+ * Spinner.
+ * Taken from https://codepen.io/mrrocks/pen/EiplA
+ *
+ * @I Spinner colors work when embedded in pages but not when loading the app
+ *    type     : bug
+ *    priority : low
+ *    labels   : css, user-experience
+ */
+.spinner-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spinner {
+  animation: rotator 1.4s linear infinite;
+  color: lightcyan;
+}
+
+@keyframes rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(270deg); }
+}
+
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation:
+    dash 1.4s ease-in-out infinite,
+    colors 5.6s ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% { stroke: #777; }
+  25% { stroke: lightcyan; }
+  50% { stroke: #F7C223; }
+  75% { stroke: #1B9A59; }
+  100% { stroke: #4285F4; }
+}
+
+@keyframes dash {
+ 0% { stroke-dashoffset: 187; }
+ 50% {
+   stroke-dashoffset: 46.75;
+   transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: 187;
+   transform:rotate(450deg);
+ }
+}
