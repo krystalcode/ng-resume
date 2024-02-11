@@ -14,6 +14,7 @@ import { ShareComponent } from './share/share.component';
 import { EducationComponent } from './education/education.component';
 import { LocationComponent } from './location/location.component';
 import { PerspectivesComponent } from './perspectives/perspectives.component';
+import { SkillsComponent } from './skills/skills.component';
 import { CodeComponent } from './code/code.component';
 import { FilesComponent } from './files/files.component';
 import { InterestsComponent } from './interests/interests.component';
@@ -21,6 +22,7 @@ import { InterestsComponent } from './interests/interests.component';
 const routes: Routes = [
   { path: 'cover-letter'       , component: CoverLetterComponent  },
   { path: 'perspectives'       , component: PerspectivesComponent },
+  { path: 'skills-technologies', component: SkillsComponent       },
   { path: 'code'               , component: CodeComponent         },
   { path: 'education'          , component: EducationComponent    },
   { path: 'awards'             , component: AwardsComponent       },
@@ -43,6 +45,7 @@ const routes: Routes = [
     EducationComponent,
     LocationComponent,
     PerspectivesComponent,
+    SkillsComponent,
     CodeComponent,
     FilesComponent,
     InterestsComponent

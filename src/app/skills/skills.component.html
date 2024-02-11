@@ -1,0 +1,32 @@
+<h2>Skills & Technologies</h2>
+
+<div class="tip">
+  <i class="material-icons">search</i> <span style="font-style:italic">Tip: Use the browser's search function (Ctr+F) to look for a specific language or skill.</span>
+</div>
+
+<div class="card-list">
+  <md-card *ngFor="let item of items" class="mini-card with-appendix">
+
+    <md-card-title>{{item.title}}</md-card-title>
+
+    <md-card-content>
+      <ul class="card-appendix unstyled">
+        <li *ngIf="item.present">
+          <i class="material-icons" title="Current focus and specialization">
+            developer_board
+          </i>
+          {{item.present}}
+        </li>
+        <li *ngIf="item.past">
+          <i class="material-icons" title="I have worked with in the past in a variety of contexts and proficiency levels">history</i> {{item.past}}
+        </li>
+        <li *ngIf="item.explore">
+          <i class="material-icons" title="I am currently exploring and experimenting with">explore</i> {{item.explore}}
+        </li>
+      </ul>
+
+      <div *ngIf="item.description" [innerHTML]="item.description"></div>
+    </md-card-content>
+
+  </md-card>
+</div>
