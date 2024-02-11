@@ -22,6 +22,7 @@ import { FilesComponent } from './files/files.component';
 import { InterestsComponent } from './interests/interests.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'cover-letter', pathMatch: 'full'       },
   { path: 'cover-letter'       , component: CoverLetterComponent  },
   { path: 'perspectives'       , component: PerspectivesComponent },
   { path: 'work-experience'    , component: WorkListComponent     },
