@@ -1,0 +1,14 @@
+<h2>Perspectives</h2>
+
+<div class="card-list">
+  <md-card *ngFor="let item of items">
+
+    <md-card-title>{{item.title}}</md-card-title>
+    <md-card-subtitle *ngIf="item.subtitle">@{{item.subtitle}}</md-card-subtitle>
+
+    <md-card-content>
+      <div [innerHTML]="item.body"></div>
+    </md-card-content>
+
+  </md-card>
+</div>

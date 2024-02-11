@@ -12,12 +12,14 @@ import { LanguagesComponent } from './languages/languages.component';
 import { AwardsComponent } from './awards/awards.component';
 import { EducationComponent } from './education/education.component';
 import { LocationComponent } from './location/location.component';
+import { PerspectivesComponent } from './perspectives/perspectives.component';
 import { CodeComponent } from './code/code.component';
 import { FilesComponent } from './files/files.component';
 import { InterestsComponent } from './interests/interests.component';
 
 const routes: Routes = [
   { path: 'cover-letter'       , component: CoverLetterComponent  },
+  { path: 'perspectives'       , component: PerspectivesComponent },
   { path: 'code'               , component: CodeComponent         },
   { path: 'education'          , component: EducationComponent    },
   { path: 'awards'             , component: AwardsComponent       },
@@ -37,6 +39,7 @@ const routes: Routes = [
     AwardsComponent,
     EducationComponent,
     LocationComponent,
+    PerspectivesComponent,
     CodeComponent,
     FilesComponent,
     InterestsComponent
