@@ -10,6 +10,7 @@ import { CoverLetterComponent } from './cover-letter/cover-letter.component';
 import { ContactComponent } from './contact/contact.component';
 import { LanguagesComponent } from './languages/languages.component';
 import { AwardsComponent } from './awards/awards.component';
+import { ShareComponent } from './share/share.component';
 import { EducationComponent } from './education/education.component';
 import { LocationComponent } from './location/location.component';
 import { PerspectivesComponent } from './perspectives/perspectives.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'location'           , component: LocationComponent     },
   { path: 'files'              , component: FilesComponent        },
   { path: 'contact'            , component: ContactComponent      },
+  { path: 'share'              , component: ShareComponent        }
 ];
 
 @NgModule({
@@ -37,6 +39,7 @@ const routes: Routes = [
     ContactComponent,
     LanguagesComponent,
     AwardsComponent,
+    ShareComponent,
     EducationComponent,
     LocationComponent,
     PerspectivesComponent,
